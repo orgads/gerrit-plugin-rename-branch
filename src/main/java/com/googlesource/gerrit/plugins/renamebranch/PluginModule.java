@@ -29,6 +29,6 @@ public class PluginModule extends RestApiModule {
         .annotatedWith(Exports.named(RENAME_BRANCH))
         .to(RenameBranchCapability.class);
     // Register the REST API endpoint directly here
-    post(PROJECT_KIND, "rename-branch").to(RenameBranch.class);
+    post(PROJECT_KIND, "rename-branch").to(RenameBranchAction.class);
   }
 }

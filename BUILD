@@ -13,9 +13,13 @@ gerrit_plugin(
     manifest_entries = [
         "Gerrit-PluginName: rename-branch",
         "Gerrit-Module: com.googlesource.gerrit.plugins.renamebranch.PluginModule",
+        "Gerrit-HttpModule: com.googlesource.gerrit.plugins.renamebranch.HttpModule",
         "Gerrit-SshModule: com.googlesource.gerrit.plugins.renamebranch.SshModule",
     ],
     resources = glob(["src/main/resources/**/*"]),
+    deps = [
+        "//plugins/rename-branch/web:gr-rename-branch",
+    ],
 )
 
 junit_tests(

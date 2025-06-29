@@ -36,7 +36,8 @@ import org.junit.Test;
 @TestPlugin(
     name = "rename-branch",
     sysModule = "com.googlesource.gerrit.plugins.renamebranch.PluginModule",
-    sshModule = "com.googlesource.gerrit.plugins.renamebranch.SshModule")
+    sshModule = "com.googlesource.gerrit.plugins.renamebranch.SshModule",
+    httpModule = "com.googlesource.gerrit.plugins.renamebranch.HttpModule")
 public class RenameBranchIT extends LightweightPluginDaemonTest {
   private static final String RENAME_BRANCH_CAPABILITY = "rename-branch-renameBranch";
 
